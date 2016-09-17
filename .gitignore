@@ -1,1 +1,10 @@
 node_modules
+
+bin
+
+obj
+
+typings
+
+TestingOnline.njsproj
+Quiz.sln

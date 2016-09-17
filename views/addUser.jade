@@ -1,0 +1,42 @@
+﻿extends layout
+
+block content
+  script(src="https://code.jquery.com/jquery-3.1.0.min.js")
+  h1= title
+  div
+    p username
+    input(type='text' id='txtUsername')
+    br
+    p password
+    input(type='text' id='txtPassword')
+    br
+    p name
+    input(type='text' id='txtName')
+    br
+    p DOB
+    input(type='text' id='txtDOB')
+    br
+    p(id='message')
+    input(type='button' onclick='fLogin()' value='Save')
+    script(type='text/javascript').
+        function fLogin(){
+            var username = document.getElementById("txtUsername").value;
+            var password = document.getElementById("txtPassword").value;
+            var name = document.getElementById("txtName").value;
+            var DOB = document.getElementById("txtDOB").value;
+            var msgElement = document.getElementById("message");
+            $.ajax({
+                url: "/api/user",
+                method: "POST",
+                contentType : "application/json",
+                data: JSON.stringify({"username": username, "password": password, "name": name, "DOB": DOB}),
+                success: function(response) {
+                    if(response.success) {
+                        msgElement.innerHTML = "Success";
+                    } else {
+                        msgElement.innerHTML = "Fail";
+                    }
+                }
+            });
+        }
+    
