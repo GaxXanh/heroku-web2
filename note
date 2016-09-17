@@ -1,0 +1,12 @@
+Student
+- Test page
+- Login page
+- User Information page
+- Result page
+
+Admin
+- Login page
+- Question manager page (CRUD + search)
+- User manager page (CRUD + search)
+- Statistic page (CRUD + search)
+- Test manager page (CRUD + search)
