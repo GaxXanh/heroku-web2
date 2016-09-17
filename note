@@ -6,7 +6,7 @@ Student
 
 Admin
 - Login page
-- Question manager page
-- User manager page
-- Statistic page
-- Test manager page
+- Question manager page (CRUD + search)
+- User manager page (CRUD + search)
+- Statistic page (CRUD + search)
+- Test manager page (CRUD + search)
